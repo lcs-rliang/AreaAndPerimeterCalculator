@@ -10,14 +10,19 @@ import SwiftUI
 struct RectangleView: View {
     
     //MARK: Stored properties
-    let length: Double = 7
-    let width: Double = 5
+    //  @State is a "property wrapper" that essentially
+    //  tells Swoƒ
+    @State var length: Double = 50
+    @State var width: Double = 25
     
     //MARK: Computed Properties
-    var area: Double{
+    var area: Double {
         return length * width
     }
     
+    var perimeter: Double {
+        return 2 * (length + width)
+    }
     
     //Expressing the user interface
     var body: some View {
@@ -33,27 +38,56 @@ struct RectangleView: View {
                 Spacer()
             }
             
-            Text("Length")
-                .font(.title2)
-                .bold()
-            //Use string interpolation to convert
-            //The Double data type to text (String)
-            Text("\(length)")
-                .font(.title2)
+            Group {
+                Text("Length")
+                    .font(.title2)
+                    .bold()
+                
+                Slider(value: $length,
+                       in: 0...100,
+                       label: { Text("Length") },
+                       minimumValueLabel: { Text("0") },
+                       maximumValueLabel: { Text("100") })
+                //Use string interpolation to convert
+                //The Double data type to text (String)
+                
+                //\
+                Text("\(length)")
+                    .font(.title2)
+            }
             
-            Text("Width")
-                .font(.title2)
-                .bold()
+            Group {
+                
+                Text("Width")
+                    .font(.title2)
+                    .bold()
+                
+                Slider(value: $width,
+                       in: 0...100,
+                       label: { Text("Width") },
+                       minimumValueLabel: { Text("0") },
+                       maximumValueLabel: { Text("100") })
+                
+                Text("\(width)")
+                    .font(.title2)
+            }
             
-            Text("\(width)")
-                .font(.title2)
+            Group{
+                Text("Area")
+                    .font(.title2)
+                    .bold()
+                
+                Text("\(area)")
+                    .font(.title2)
+            }
             
-            Text("Area")
-                .font(.title2)
-                .bold()
-            
-            Text("\(area)")
-                .font(.title2)
+            Group{
+                Text("Perimeter")
+                    .font(.title2)
+                    .bold()
+                
+                Text("\(perimeter)")
+            }
             
             Spacer()
             
