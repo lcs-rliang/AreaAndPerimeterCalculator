@@ -55,6 +55,7 @@ struct RectangleView: View {
                 Text("\(length)")
                     .font(.title2)
             }
+            .padding()
             
             Group {
                 
@@ -71,6 +72,7 @@ struct RectangleView: View {
                 Text("\(width)")
                     .font(.title2)
             }
+            .padding()
             
             Group{
                 Text("Area")
@@ -80,6 +82,7 @@ struct RectangleView: View {
                 Text("\(area)")
                     .font(.title2)
             }
+            .padding()
             
             Group{
                 Text("Perimeter")
@@ -88,9 +91,7 @@ struct RectangleView: View {
                 
                 Text("\(perimeter)")
             }
-            
-            Spacer()
-            
+            .padding()
         }
     }
     
