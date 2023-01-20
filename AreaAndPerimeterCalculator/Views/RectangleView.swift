@@ -14,6 +14,8 @@ struct RectangleView: View {
     //  tells Swoƒ
     @State var length: Double = 50
     @State var width: Double = 25
+    @State var desirePrecision: Double = 1
+    
     
     //MARK: Computed Properties
     var area: Double {
@@ -52,10 +54,10 @@ struct RectangleView: View {
                 //The Double data type to text (String)
                 
                 //\
-                Text("\(length)")
+                Text("\(length.formatted(.number.precision(.fractionLength(2))))")
                     .font(.title2)
             }
-            .padding()
+            
             
             Group {
                 
@@ -69,20 +71,20 @@ struct RectangleView: View {
                        minimumValueLabel: { Text("0") },
                        maximumValueLabel: { Text("100") })
                 
-                Text("\(width)")
+                Text("\(width.formatted(.number.precision(.fractionLength(2))))")
                     .font(.title2)
             }
-            .padding()
+            
             
             Group{
                 Text("Area")
                     .font(.title2)
                     .bold()
                 
-                Text("\(area)")
+                Text("\(area.formatted(.number.precision(.fractionLength(Int(desirePrecision)))))")
                     .font(.title2)
             }
-            .padding()
+           
             
             Group{
                 Text("Perimeter")
@@ -91,8 +93,15 @@ struct RectangleView: View {
                 
                 Text("\(perimeter)")
             }
-            .padding()
+            
+            
+            Stepper("Precision", value: $desirePrecision, in: 0...6)
+            
+            
+            //Show precision
+            Text("\(desirePrecision.formatted(.number.precision(.fractionLength(0))))")
         }
+        Spacer()
     }
     
     struct RectangleView_Previews: PreviewProvider {
