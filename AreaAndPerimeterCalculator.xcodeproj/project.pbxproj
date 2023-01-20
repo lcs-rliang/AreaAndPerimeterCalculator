@@ -12,6 +12,7 @@
 		4CBCB6D22979A19E00AFD815 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBCB6D12979A19E00AFD815 /* Preview Assets.xcassets */; };
 		4CBCB6DB2979A42C00AFD815 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB6DA2979A42C00AFD815 /* RectangleView.swift */; };
 		4CBCB715297B28A000AFD815 /* SphereView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB714297B289F00AFD815 /* SphereView.swift */; };
+		4CBCB717297B313B00AFD815 /* Square-basedPyramidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCB716297B313B00AFD815 /* Square-basedPyramidView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4CBCB6D12979A19E00AFD815 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4CBCB6DA2979A42C00AFD815 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 		4CBCB714297B289F00AFD815 /* SphereView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereView.swift; sourceTree = "<group>"; };
+		4CBCB716297B313B00AFD815 /* Square-basedPyramidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Square-basedPyramidView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				4CBCB6DA2979A42C00AFD815 /* RectangleView.swift */,
 				4CBCB714297B289F00AFD815 /* SphereView.swift */,
+				4CBCB716297B313B00AFD815 /* Square-basedPyramidView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				4CBCB715297B28A000AFD815 /* SphereView.swift in Sources */,
 				4CBCB6DB2979A42C00AFD815 /* RectangleView.swift in Sources */,
+				4CBCB717297B313B00AFD815 /* Square-basedPyramidView.swift in Sources */,
 				4CBCB6CB2979A19A00AFD815 /* AreaAndPerimeterCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
